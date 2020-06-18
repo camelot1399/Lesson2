@@ -14,7 +14,7 @@
         <div class="header__left">
             <div class="logo"> <img src="img/logo.png" alt="BRAND" class="logo__img">BRAN <span class="logo__D">D</span> </div>
             <form action="#" class="header__form">
-                <div class="browse">Browse <img src="img/browse.png" alt="Browse"> </div>
+                <div class="browse">Browse <i class="fas fa-caret-down"></i> </div>
                 <input type="text" placeholder="Search for Item..." class="form__input input_cfg">
                 <button class="btn_search"> <img src="img/search.png" alt="btn_search"> </button>
             </form>
@@ -28,8 +28,8 @@
     </header>
     <nav class="nav center">
         <ul class="menu">
-            <li class="menu__item"><a href="#" class="menu__link" alt="Home">Home</a></li>
-            <li class="menu__item"><a href="#" class="menu__link" alt="Man">Man</a></li>
+            <li class="menu__item"><a href="index.html" class="menu__link" alt="Home">Home</a></li>
+            <li class="menu__item"><a href="catalog.html" class="menu__link menu__link_active" alt="Man">Man</a></li>
             <li class="menu__item"><a href="#" class="menu__link" alt="Women">Women</a></li>
             <li class="menu__item"><a href="#" class="menu__link" alt="Kids">Kids</a></li>
             <li class="menu__item"><a href="#" class="menu__link" alt="Accoseriese">Accoseriese</a></li>
@@ -51,9 +51,8 @@
         
     </div>
     
-    <div class="catalog center">
+    <section class="catalog center">
         <nav class="sidebar">
-           
             <div class="sidebar__item">
                 <details class="sidebar__item_details">
                     <summary class="sidebar__item_summary">Category</summary>
@@ -74,8 +73,7 @@
                     </ul>
                 </details>
             </div>
-            
-             <div class="sidebar__item">
+            <div class="sidebar__item">
                 <details class="sidebar__item_details">
                     <summary class="sidebar__item_summary">BRAND</summary>
                     <ul class="sidebar__item_ul">
@@ -95,8 +93,7 @@
                     </ul>
                 </details>
             </div>
-            
-             <div class="sidebar__item">
+            <div class="sidebar__item">
                 <details class="sidebar__item_details">
                     <summary class="sidebar__item_summary">dESIGNER</summary>
                     <ul class="sidebar__item_ul">
@@ -117,227 +114,350 @@
                 </details>
             </div>
         </nav>
-        <div class="catalog__container">catalog__container</div>
-    </div>
-    
-    <section class="featuredItems center">
-        <div class="featuredItems_header">
-            <h2 class="featuredItems_header_h2">Fetured Items</h2> 
-            <span class="featuredItems_header_info">Shop for items based on what we featured in this week</span>
-        </div>        
-        <div class="featuredItems__list">
+        <div class="catalog__container">
+            <section class="topFilter">
+                <div class="topFilter__item">
+                    <div class="topFilter__item_label">Trending now</div>
+                    
+                    <div class="topFilter__item_param">
+                        <ul class="topFilter__item_param_ul">
+                            <li>Bohemian</li>
+                            <li>Floral</li>
+                            <li>Lace</li>
+                            <li>Floral</li>
+                            <li>Lace</li>
+                            <li>Bohemian</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="topFilter__item">
+                    <div class="topFilter__item_label">Size</div>
+                    
+                    <div class="topFilter__item_param_size ">
+                        
+                        <label for="tf__xxs" class="topFilter__lbl">
+                            <input type="checkbox" id="tf__xxs"> xxs
+                        </label>
+                        
+                         <label for="tf__l" class="topFilter__lbl">
+                            <input type="checkbox" id="tf__l"> l
+                        </label>
+                        
+                        <label for="tf__xs" class="topFilter__lbl">
+                            <input type="checkbox" id="tf__xs"> xs
+                        </label>
+                        
+                         <label for="tf__xl" class="topFilter__lbl">
+                            <input type="checkbox" id="tf__xl"> xl
+                        </label>
+                        
+                        <label for="tf__s" class="topFilter__lbl">
+                            <input type="checkbox" id="tf__s"> s
+                        </label>
+                        
+                         <label for="tf__xxl" class="topFilter__lbl">
+                            <input type="checkbox" id="tf__xxl"> xxl
+                        </label>
+                        
+                        <label for="tf__m" class="topFilter__lbl">
+                            <input type="checkbox" id="tf__m"> m
+                        </label>
+                        
+                       
+                        
+                       
+                        
+                       
+                        
+                    </div>
+                    
+                </div>
+                <div class="topFilter__item">
+                    <div class="topFilter__item_label">pRICE</div>
+                    
+                    <div class="topFilter__item_param_price">
+                       
+                       <form oninput="result.value=(range.value)" action="#">
+                            <label for="range">
+                                <input type="range" id="range" min="0" max="400" value="52" step="1">
+                            </label>
+                            <div class="topFilter__item_param_result">
+                                <output name="result" for="range">52</output>$
+                            </div>
+                       </form>
+                       
+                        
+                    </div>
+                </div>
+            </section>
+            <nav class="catalog__rectangle">
+               
+                <div class="catalog__rectangle_filter">
+                    <div class="catalog__rectangle_filter_item">Sort By</div>
+                    <div id="catalog__rectangle_filter_sortBy" class="catalog__rectangle_filter_item">Name <i class="fas fa-caret-down"></i> </div>
+                </div>
+                
+                <div class="catalog__rectangle_filter">
+                    <div class="catalog__rectangle_filter_item">Show</div>
+                    <div id="catalog__rectangle_filter_show" class="catalog__rectangle_filter_item">09 <i class="fas fa-caret-down"></i> </div>
+                </div>
+                
+            </nav>
+            
+            <div class="catalot__product">
+                <div class="featuredItems__list">
            
-            <div class="featuredItems__item">
-             
-                <div class="featuredItems__item_box">
-                   <div class="featuredItems__item_img">
-                       <a href="#" class="featuredItems__img_link">
-                           <img src="img/featuredItems/1.png" alt="" class="featuredItems__img">
-                       </a>
-                   </div>
+                    <div class="featuredItems__item">
 
-                    <div class="featuredItems__hover">
-                        <a href="#" class="featuredItems__link">
-                            <img class="basket_featuredItems" src="img/featuredItems/basket_featuredItems.png" alt="Корзина">Add to Cart 
-                        </a>
-                    </div>
-                </div>
-              
-                <div class="featuredItems_label">Mango People T-shirt</div>
-                <div class="featuredItems_price">$52.00</div>
-                
-            </div>
-            <div class="featuredItems__item">
-             
-                <div class="featuredItems__item_box">
-                   <div class="featuredItems__item_img">
-                       <a href="#" class="featuredItems__img_link">
-                           <img src="img/featuredItems/2.png" alt="" class="featuredItems__img">
-                       </a>
-                   </div>
+                        <div class="featuredItems__item_box">
+                           <div class="featuredItems__item_img">
+                               <a href="#" class="featuredItems__img_link">
+                                   <img src="img/catalot__product/1.png" alt="" class="featuredItems__img">
+                               </a>
+                           </div>
 
-                    <div class="featuredItems__hover">
-                        <a href="#" class="featuredItems__link">
-                            <img class="basket_featuredItems" src="img/featuredItems/basket_featuredItems.png" alt="Корзина">Add to Cart 
-                        </a>
-                    </div>
-                </div>
-              
-                <div class="featuredItems_label">Mango People T-shirt</div>
-                <div class="featuredItems_price">$52.00</div>
-                
-            </div>
-            <div class="featuredItems__item">
-             
-                <div class="featuredItems__item_box">
-                   <div class="featuredItems__item_img">
-                       <a href="#" class="featuredItems__img_link">
-                           <img src="img/featuredItems/3.png" alt="" class="featuredItems__img">
-                       </a>
-                   </div>
+                            <div class="featuredItems__hover">
+                                <a href="#" class="featuredItems__link">
+                                    <img class="basket_featuredItems" src="img/catalot__product/basket.png" alt="Корзина">Add to Cart 
+                                </a>
+                            </div>
+                        </div>
 
-                    <div class="featuredItems__hover">
-                        <a href="#" class="featuredItems__link">
-                            <img class="basket_featuredItems" src="img/featuredItems/basket_featuredItems.png" alt="Корзина">Add to Cart 
-                        </a>
-                    </div>
-                </div>
-              
-                <div class="featuredItems_label">Mango People T-shirt</div>
-                <div class="featuredItems_price">$52.00</div>
-                
-            </div>
-            <div class="featuredItems__item">
-             
-                <div class="featuredItems__item_box">
-                   <div class="featuredItems__item_img">
-                       <a href="#" class="featuredItems__img_link">
-                           <img src="img/featuredItems/4.png" alt="" class="featuredItems__img">
-                       </a>
-                   </div>
+                        <div class="featuredItems_label">Mango People T-shirt</div>
+                        <div class="featuredItems_price">$52.00</div>
 
-                    <div class="featuredItems__hover">
-                        <a href="#" class="featuredItems__link">
-                            <img class="basket_featuredItems" src="img/featuredItems/basket_featuredItems.png" alt="Корзина">Add to Cart 
-                        </a>
                     </div>
-                </div>
-              
-                <div class="featuredItems_label">Mango People T-shirt</div>
-                <div class="featuredItems_price">$52.00</div>
-                
-            </div>
-            <div class="featuredItems__item">
-             
-                <div class="featuredItems__item_box">
-                   <div class="featuredItems__item_img">
-                       <a href="#" class="featuredItems__img_link">
-                           <img src="img/featuredItems/5.png" alt="" class="featuredItems__img">
-                       </a>
-                   </div>
+                    <div class="featuredItems__item">
 
-                    <div class="featuredItems__hover">
-                        <a href="#" class="featuredItems__link">
-                            <img class="basket_featuredItems" src="img/featuredItems/basket_featuredItems.png" alt="Корзина">Add to Cart 
-                        </a>
-                    </div>
-                </div>
-              
-                <div class="featuredItems_label">Mango People T-shirt</div>
-                <div class="featuredItems_price">$52.00</div>
-                
-            </div>
-            <div class="featuredItems__item">
-             
-                <div class="featuredItems__item_box">
-                   <div class="featuredItems__item_img">
-                       <a href="#" class="featuredItems__img_link">
-                           <img src="img/featuredItems/6.png" alt="" class="featuredItems__img">
-                       </a>
-                   </div>
+                        <div class="featuredItems__item_box">
+                           <div class="featuredItems__item_img">
+                               <a href="#" class="featuredItems__img_link">
+                                   <img src="img/catalot__product/2.png" alt="" class="featuredItems__img">
+                               </a>
+                           </div>
 
-                    <div class="featuredItems__hover">
-                        <a href="#" class="featuredItems__link">
-                            <img class="basket_featuredItems" src="img/featuredItems/basket_featuredItems.png" alt="Корзина">Add to Cart 
-                        </a>
-                    </div>
-                </div>
-              
-                <div class="featuredItems_label">Mango People T-shirt</div>
-                <div class="featuredItems_price">$52.00</div>
-                
-            </div>
-            <div class="featuredItems__item">
-             
-                <div class="featuredItems__item_box">
-                   <div class="featuredItems__item_img">
-                       <a href="#" class="featuredItems__img_link">
-                           <img src="img/featuredItems/7.png" alt="" class="featuredItems__img">
-                       </a>
-                   </div>
+                            <div class="featuredItems__hover">
+                                <a href="#" class="featuredItems__link">
+                                    <img class="basket_featuredItems" src="img/fcatalot__product/basket.png" alt="Корзина">Add to Cart 
+                                </a>
+                            </div>
+                        </div>
 
-                    <div class="featuredItems__hover">
-                        <a href="#" class="featuredItems__link">
-                            <img class="basket_featuredItems" src="img/featuredItems/basket_featuredItems.png" alt="Корзина">Add to Cart 
-                        </a>
-                    </div>
-                </div>
-              
-                <div class="featuredItems_label">Mango People T-shirt</div>
-                <div class="featuredItems_price">$52.00</div>
-                
-            </div>
-            <div class="featuredItems__item">
-             
-                <div class="featuredItems__item_box">
-                   <div class="featuredItems__item_img">
-                       <a href="#" class="featuredItems__img_link">
-                           <img src="img/featuredItems/8.png" alt="" class="featuredItems__img">
-                       </a>
-                   </div>
+                        <div class="featuredItems_label">Mango People T-shirt</div>
+                        <div class="featuredItems_price">$52.00</div>
 
-                    <div class="featuredItems__hover">
-                        <a href="#" class="featuredItems__link">
-                            <img class="basket_featuredItems" src="img/featuredItems/basket_featuredItems.png" alt="Корзина">Add to Cart 
-                        </a>
                     </div>
-                </div>
-              
-                <div class="featuredItems_label">Mango People T-shirt</div>
-                <div class="featuredItems_price">$52.00</div>
-                
+                    <div class="featuredItems__item">
+
+                        <div class="featuredItems__item_box">
+                           <div class="featuredItems__item_img">
+                               <a href="#" class="featuredItems__img_link">
+                                   <img src="img/catalot__product/3.png" alt="" class="featuredItems__img">
+                               </a>
+                           </div>
+
+                            <div class="featuredItems__hover">
+                                <a href="#" class="featuredItems__link">
+                                    <img class="basket_featuredItems" src="img/catalot__product/basket.png" alt="Корзина">Add to Cart 
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="featuredItems_label">Mango People T-shirt</div>
+                        <div class="featuredItems_price">$52.00</div>
+
+                    </div>
+                    <div class="featuredItems__item">
+
+                        <div class="featuredItems__item_box">
+                           <div class="featuredItems__item_img">
+                               <a href="#" class="featuredItems__img_link">
+                                   <img src="img/catalot__product/4.png" alt="" class="featuredItems__img">
+                               </a>
+                           </div>
+
+                            <div class="featuredItems__hover">
+                                <a href="#" class="featuredItems__link">
+                                    <img class="basket_featuredItems" src="img/featuredItems/basket_featuredItems.png" alt="Корзина">Add to Cart 
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="featuredItems_label">Mango People T-shirt</div>
+                        <div class="featuredItems_price">$52.00</div>
+
+                    </div>
+                    <div class="featuredItems__item">
+
+                        <div class="featuredItems__item_box">
+                           <div class="featuredItems__item_img">
+                               <a href="#" class="featuredItems__img_link">
+                                   <img src="img/catalot__product/5.png" alt="" class="featuredItems__img">
+                               </a>
+                           </div>
+
+                            <div class="featuredItems__hover">
+                                <a href="#" class="featuredItems__link">
+                                    <img class="basket_featuredItems" src="img/catalot__product/basket.png" alt="Корзина">Add to Cart 
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="featuredItems_label">Mango People T-shirt</div>
+                        <div class="featuredItems_price">$52.00</div>
+
+                    </div>
+                    <div class="featuredItems__item">
+
+                        <div class="featuredItems__item_box">
+                           <div class="featuredItems__item_img">
+                               <a href="#" class="featuredItems__img_link">
+                                   <img src="img/catalot__product/6.png" alt="" class="featuredItems__img">
+                               </a>
+                           </div>
+
+                            <div class="featuredItems__hover">
+                                <a href="#" class="featuredItems__link">
+                                    <img class="basket_featuredItems" src="img/catalot__product/basket.png" alt="Корзина">Add to Cart 
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="featuredItems_label">Mango People T-shirt</div>
+                        <div class="featuredItems_price">$52.00</div>
+
+                    </div>
+                    <div class="featuredItems__item">
+
+                        <div class="featuredItems__item_box">
+                           <div class="featuredItems__item_img">
+                               <a href="#" class="featuredItems__img_link">
+                                   <img src="img/featuredItems/7.png" alt="" class="featuredItems__img">
+                               </a>
+                           </div>
+
+                            <div class="featuredItems__hover">
+                                <a href="#" class="featuredItems__link">
+                                    <img class="basket_featuredItems" src="img/catalot__product/basket.png" alt="Корзина">Add to Cart 
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="featuredItems_label">Mango People T-shirt</div>
+                        <div class="featuredItems_price">$52.00</div>
+
+                    </div>
+                    <div class="featuredItems__item">
+
+                        <div class="featuredItems__item_box">
+                           <div class="featuredItems__item_img">
+                               <a href="#" class="featuredItems__img_link">
+                                   <img src="img/catalot__product/8.png" alt="" class="featuredItems__img">
+                               </a>
+                           </div>
+
+                            <div class="featuredItems__hover">
+                                <a href="#" class="featuredItems__link">
+                                    <img class="basket_featuredItems" src="img/featuredItems/basket_featuredItems.png" alt="Корзина">Add to Cart 
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="featuredItems_label">Mango People T-shirt</div>
+                        <div class="featuredItems_price">$52.00</div>
+
+                    </div>
+                    
+                    <div class="featuredItems__item">
+
+                        <div class="featuredItems__item_box">
+                           <div class="featuredItems__item_img">
+                               <a href="#" class="featuredItems__img_link">
+                                   <img src="img/catalot__product/9.png" alt="" class="featuredItems__img">
+                               </a>
+                           </div>
+
+                            <div class="featuredItems__hover">
+                                <a href="#" class="featuredItems__link">
+                                    <img class="basket_featuredItems" src="img/featuredItems/basket_featuredItems.png" alt="Корзина">Add to Cart 
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="featuredItems_label">Mango People T-shirt</div>
+                        <div class="featuredItems_price">$52.00</div>
+
+                    </div>
+
+                </div>  
             </div>
             
-        </div>   
-        <div class="featuredItems_header"> 
-           <a href="#" class="btnMyAccount">Browse All Product
-               <i class="fas fa-long-arrow-alt-right mleft_icon"></i>
-            </a> 
+            <div class="catalog__pagination">
+               
+                <div class="catalog__pagination_item">
+                   
+                    <div class="catalog__pagination_list">
+                        <ul class="catalog__pagination_list_ul">
+                             <li class="catalog__pagination_list_li">
+                               <a href="#" class="catalog__pagination_list_link">
+                                    <i class="fas fa-angle-left"></i>
+                                </a>
+                            </li>
+                            
+                            <li class="catalog__pagination_list_li"><a href="#" class="catalog__pagination_list_link">1</a></li>
+                            <li class="catalog__pagination_list_li"><a href="#" class="catalog__pagination_list_link">2</a></li>
+                            <li class="catalog__pagination_list_li"><a href="#" class="catalog__pagination_list_link">3</a></li>
+                            <li class="catalog__pagination_list_li"><a href="#" class="catalog__pagination_list_link">4</a></li>
+                            <li class="catalog__pagination_list_li"><a href="#" class="catalog__pagination_list_link">5</a></li>
+                            <li class="catalog__pagination_list_li"><a href="#" class="catalog__pagination_list_link">6</a></li>
+                            <li class="catalog__pagination_list_li"><a href="#" class="catalog__pagination_list_link">...</a></li>
+                            <li class="catalog__pagination_list_li"><a href="#" class="catalog__pagination_list_link">20</a></li>
+                            
+                            <li class="catalog__pagination_list_li">
+                               <a href="#" class="catalog__pagination_list_link">
+                                    <i class="fas fa-angle-right"></i>
+                                </a>
+                            </li>
+                            
+                            
+                        </ul>
+                    </div>
+                    
+                </div>
+                
+                <div class="catalog__pagination_item">
+                    <a href="" class="catalog__viewAll">View All</a>
+                </div>
+            </div>
         </div>
-        
     </section>
     
-    <section class="offer30 center">
-        <article class="offer30__left">
-            <div class="offer30__left_bg1"></div>
-            <div class="offer30__left_bg2"></div>
-            <h2 class="offer30__left_h2">30% <span class="offer30__left_offer">OFFER</span> <br><span class="offer30__left_forWomen">FOR WOMEN</span></h2>
-        </article>
-        <div class="offer30__right">
+    <section class="offer3list">
+        <div class="offer3list__center center">
            
-            <div class="offer30__right_list">
-               
-                <article class="offer30__right_item">
-                    <div class="offer30__right_item__left">
+            <article class="offer3list__center_item">
+                    <div class="offer3list__center_item__left">
                         <img src="img/offer30/car.png" alt="">
                     </div>
-                    <div class="offer30__right_item__right">
-                        <div class="offer30__right_item__right_label">Free Delivery</div>
-                         <div class="offer30__right_item__right_text">Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.</div>
-                    </div>
+                    <div class="offer3list__center_item__label">Free Delivery</div>
+                    <div class="offer3list__center_item__text">Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.</div>
                 </article>
                 
-                <article class="offer30__right_item">
-                    <div class="offer30__right_item__left">
+            <article class="offer3list__center_item">
+                    <div class="offer3list__center_item__left">
                         <img src="img/offer30/sale.png" alt="">
                     </div>
-                    <div class="offer30__right_item__right">
-                        <div class="offer30__right_item__right_label">Sales & discounts</div>
-                         <div class="offer30__right_item__right_text">Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.</div>
-                    </div>
+                    <div class="offer3list__center_item__label">Sales & discounts</div>
+                    <div class="offer3list__center_item__text">Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.</div>
                 </article>
                 
-                <article class="offer30__right_item">
-                    <div class="offer30__right_item__left">
+            <article class="offer3list__center_item">
+                    <div class="offer3list__center_item__left">
                         <img src="img/offer30/corona.png" alt="">
                     </div>
-                    <div class="offer30__right_item__right">
-                        <div class="offer30__right_item__right_label">Quality assurance</div>
-                         <div class="offer30__right_item__right_text">Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.</div>
-                    </div>
+                    <div class="offer3list__center_item__label">Quality assurance</div>
+                    <div class="offer3list__center_item__text">Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.</div>
                 </article>
-                   
-            </div>
             
         </div>
     </section>

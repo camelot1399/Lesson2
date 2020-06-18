@@ -126,8 +126,12 @@ input[type="text"]:-ms-input-placeholder { padding-left: 16px;}
     border-bottom: 3px solid #fff;
 }
 
+.menu__link_active {
+    border-bottom: 3px solid rgba(239, 91, 112, 1);
+}
+
 .menu__link:hover {
-    border-bottom: 3px solid rgba(239, 91, 112, 1);;
+    border-bottom: 3px solid rgba(239, 91, 112, 1);
 }
 
 .promo {
@@ -706,32 +710,38 @@ input[type="email"] {
 .catalog {
     display: flex;
     justify-content: space-between;
-    
+    margin-top: 59px;
 }
 
 
 /*details*/
 
 .sidebar {
-    
+    width: 243px;
+    display: block;
 }
 
 .sidebar__item {
     display: block;
-    width: 243px;
+/*    width: 243px;*/
     margin-bottom: 18px;
 }
 
-    .sidebar__item_summary {
-      display: block;
-      border-left: 5px solid rgba(239, 91, 112, 1);
-      padding: 12px 0 12px 11px;
-      border-bottom: 1px solid rgba(235, 235, 235, 1);
-        cursor: pointer;
-    }
+.sidebar__item_summary {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  border-left: 5px solid rgba(239, 91, 112, 1);
+  padding: 12px 0 12px 11px;
+  border-bottom: 1px solid rgba(235, 235, 235, 1);
+  cursor: pointer;
+  text-transform: uppercase;
+  position: relative;
+}
 
 .sidebar__item_summary:focus {
     outline: none;
+    color: rgba(239, 91, 112, 1);
 }
 
 .sidebar__item_summary::-webkit-details-marker {
@@ -740,16 +750,10 @@ input[type="email"] {
 
 .sidebar__item_summary::after {
     content: '\25B6';
-    padding-left: 137px;
-
     font-family: 'FontAwesome';
     font-size: 11px;
     color: rgba(239, 91, 112, 1);
-
-    text-transform: uppercase;
-    -webkit-transform: scale(-1);
-    -ms-transform: scale(-1);
-    transform: scale(-1);
+    
 }
 
 details[open] > .sidebar__item_summary::after {
@@ -766,4 +770,223 @@ details[open] > .sidebar__item_summary::after {
     margin-top: 22px;
     font-size: 14px;
     color: rgba(111, 110, 110, 1);
+    
+    
 }
+
+.sidebar__item_ul_link {
+    font-size: 14px;
+    color: rgba(111, 110, 110, 1);
+}
+
+.topFilter {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.topFilter__item_label {
+    font-size: 14px;
+    font-weight: bold;
+    color: rgba(111, 110, 110, 1);
+    text-transform: uppercase;
+    margin-bottom: 25px;
+}
+
+.topFilter__item_param {
+    line-height: 30px;
+}
+
+.topFilter__item_param_ul {
+    max-width: 200px;
+}
+
+.topFilter__item_param_ul li {
+    display: inline-block;
+    font-size: 14px;
+    color: rgba(111, 110, 110, 1);
+    border-right: 1px solid rgba(223, 223, 223, 1);
+    padding-left: 10px;
+    padding-right: 10px;
+    line-height: 14px;
+
+}
+
+.topFilter__item_param_ul li:first-child {
+/*    border-right: none;*/
+    padding-left: 0;
+}
+
+.topFilter__item_param_ul li:last-child {
+    border-right: none;
+    padding-right: 0;
+}
+
+.topFilter__item_param_ul li:nth-child(3) {
+/*   padding-left: 0;*/
+    border-right: none;
+}
+
+.topFilter__item_param_ul li:nth-child(4) {
+/*   border-right: none;*/
+    margin-left: -10px;
+    
+}
+
+.topFilter__lbl {
+    font-family: 'OpenSans';
+    font-size: 14px;
+    color: rgba(111, 110, 110, 1);
+    text-transform: uppercase;
+    margin-right: 23px;
+}
+
+.topFilter__item_param_size {
+    line-height: 30px;
+    display: flex;
+    flex-direction: column;
+    height: 60px;
+    flex-wrap: wrap;
+    width: 200px;
+}
+
+#range {
+    width: 262px;
+}
+
+.topFilter__item_param_result {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.catalog__rectangle {
+    background-color: rgba(243, 243, 243, 1);
+    display: flex;
+    justify-content: flex-start;
+    padding: 10px 9px;
+    margin-top: 40px;
+}
+
+.catalog__rectangle_filter {
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+}
+
+#catalog__rectangle_filter_sortBy,
+#catalog__rectangle_filter_show {
+    cursor: pointer;
+    border-left: none;
+}
+
+.catalog__rectangle_filter:last-child {
+    margin-left: 10px;
+}
+
+.catalog__rectangle_filter_item {
+    height: 38px;
+    width: 87px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    Justify-content: space-around;
+/*    color: rgba(34, 34, 34, 1);*/
+    border: 1px solid rgba(230, 230, 230, 1);
+/*    font-size: 12px;*/
+    
+    font-size: 14px;
+    color: rgba(111, 110, 110, 1);
+}
+
+
+
+.catalog__container {
+    max-width: 840px;
+}
+
+.catalog__pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.catalog__pagination_list_ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    
+    background-color: rgba(255, 255, 255, 1);
+    border: 1px solid rgba(235, 235, 235, 1);
+    border-radius: 3px;
+    padding: 17px 15px;
+}
+
+.catalog__pagination_list_li {
+    margin-right: 12px;
+}
+
+.catalog__pagination_list_li:last-child {
+    margin: 0;
+}
+
+.catalog__pagination_list_link {
+    font-size: 16px;
+    font-weight: 300;
+    color: rgba(196, 196, 196, 1);
+}
+
+.catalog__pagination_list_link:hover {
+    color: rgba(239, 91, 112, 1);
+}
+
+.catalog__viewAll {
+    font-size: 16px;
+    font-weight: 300;
+    color: rgba(239, 91, 112, 1);
+    border: 1px solid rgba(239, 91, 112, 1);
+    padding: 16px 45px;
+}
+
+.catalog__viewAll:hover {
+    background: rgba(239, 91, 112, 1);
+    color: #fff;
+}
+
+.offer3list {
+    background: #000;
+    margin-top: 110px;
+    margin-bottom: -97px;
+}
+
+.offer3list__center {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 89px;
+    padding-bottom: 114px;
+    
+}
+
+.offer3list__center_item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.offer3list__center_item__label {
+    font-size: 20px;
+    font-weight: bold;
+    color: rgba(251, 251, 251, 1);
+    margin-top: 32px;
+}
+
+.offer3list__center_item__text {
+    font-size: 14px;
+    font-weight: 300;
+    color: rgba(251, 251, 251, 1);
+    letter-spacing: 0.03em;
+     margin-top: 17px;
+    line-height: 24px;
+}
+
+    
