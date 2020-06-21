@@ -1135,3 +1135,108 @@ details[open] > .sidebar__item_summary::after {
     border: 1px solid rgba(234, 234, 234, 1);
     cursor: pointer;
 }
+
+.userInfo {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 63px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.userInfo__h4 {
+    font-size: 16px;
+    font-weight: bold;
+    color: rgba(34, 34, 34, 1);
+    text-transform: uppercase;
+}
+
+.userInfo__form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 22px;
+}
+
+.userInfo__form_item {
+    margin-bottom: 20px;
+    height: 45px;
+    border: 1px solid rgba(234, 234, 234, 1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 355px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.userInfo__form_item[placeholder] {
+    font-size: 13px;
+    font-weight: 300;
+    color: rgba(177, 177, 177, 1);
+}
+
+.userInfo__form_item_btn {
+    width: 100px;
+    height: 35px;
+    cursor: pointer;
+    background: white;
+    border: 1px solid rgba(234, 234, 234, 1);
+    font-size: 11px;
+    font-weight: bold;
+    color: rgba(74, 74, 74, 1);
+    text-transform: uppercase;
+}
+
+.userInfo__p {
+    font-size: 14px;
+    font-weight: 300;
+    color: rgba(0, 0, 0, 1);
+    margin-top: 28px;
+}
+
+.userInfo__grandTotal {
+    padding: 40px 41px 42px 44px;
+    background: #f5f3f3;
+}
+
+.userInfo__grandTotal_box {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    
+
+}
+
+.userInfo__grandTotal_box_item1 {
+    font-size: 11px;
+    color: rgba(74, 74, 74, 1);
+    text-transform: uppercase;
+}
+
+.userInfo__grandTotal_box_item2 {
+    font-size: 16px;
+    font-weight: bold;
+    color: rgba(34, 34, 34, 1);
+    text-transform: uppercase;
+    margin-top: 14px;
+}
+
+.userInfo__grandTotal_box_item2_price {
+    color: rgba(241, 109, 127, 1);
+}
+
+.userInfo__grandTotal_box2 {
+    border-top: 1px solid rgba(226, 226, 226, 1);
+    margin-top: 22px;
+}
+
+.userInfo__grandTotal_btn {
+    background: rgba(241, 109, 127, 1);
+    padding: 19px 42px;
+    border: none;
+    margin-top: 17px;
+    cursor: pointer;
+    
+}
+    
