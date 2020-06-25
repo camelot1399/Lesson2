@@ -21,7 +21,15 @@
                 </a>
             </div>
             <form action="#" class="header__form">
-                <div class="browse">Browse <i class="fas fa-caret-down"></i> </div>
+                <div id="catalog__rectangle_filter_browse" class="browse catalog__rectangle_filter_item">Browse <i class="fas fa-caret-down"></i> 
+                    <div id="catalog__filter_browse" class="catalog__filter_dropdown">
+                        <ul class="catalog__filter_dropdown_ul">
+                            <li class="catalog__filter_dropdown_li">1</li>
+                            <li class="catalog__filter_dropdown_li">2</li>
+                            <li class="catalog__filter_dropdown_li">3</li>
+                        </ul>
+                    </div>
+                </div>
                 <input type="text" placeholder="Search for Item..." class="form__input input_cfg">
                 <button class="btn_search"> <img src="img/search.png" alt="btn_search"> </button>
             </form>
@@ -45,17 +53,17 @@
         </ul>
     </nav>
     
-    <div class="breadcrumb">
-        
+    <div class="breadcrumb"> 
         <div class="breadcrumb__box center">
             <h1 class="breadcrumb__box_h1">New Arrivals</h1>
-            <nav class="breadcrumb__box_nav">
-                <a href="index.html" class="breadcrumb__box_nav_item">Home </a>
-                <a href="catalog.html" class="breadcrumb__box_nav_item">Men </a>
-                <a href="#" class="breadcrumb__box_nav_item breadcrumb__box_nav_item_active">New Arrivals</a>
+            <nav>
+                <ul class="breadcrumb__box_nav"> 
+                    <li class="breadcrumb__list"><a href="index.html" class="breadcrumb__box_nav_item">Home </a></li>
+                    <li class="breadcrumb__list"><a href="catalog.html" class="breadcrumb__box_nav_item">Men </a></li>
+                    <li class="breadcrumb__list"><a href="#" class="breadcrumb__box_nav_item breadcrumb__box_nav_item_active">New Arrivals</a></li>
+                </ul>
             </nav>
         </div>
-        
     </div>
 
     <section class="shoppingCart2 center">
@@ -175,7 +183,18 @@
             <h4 class="userInfo__h4">Shipping Adress</h4>
             
             <form action="#" id="userInfo__shippingAdress_form" class="userInfo__form">
-                <div class="userInfo__form_item">Bangladesh <i class="fas fa-caret-down" aria-hidden="true"></i> </div>
+                <div id="catalog__rectangle_filter_shippingAddress" class="userInfo__form_item">
+                    <div class="userInfo__shippingAdress_form_text">Bangladesh <i class="fas fa-caret-down" aria-hidden="true"></i> </div>
+
+                    <div id="catalog__filter_browse" class="catalog__filter_dropdown">
+                        <ul class="catalog__filter_dropdown_ul">
+                            <li class="catalog__filter_dropdown_li">1</li>
+                            <li class="catalog__filter_dropdown_li">2</li>
+                            <li class="catalog__filter_dropdown_li">3</li>
+                        </ul>
+                    </div>
+
+                </div>
                 <input type="text" placeholder="State" class="userInfo__form_item">
                 <input type="text" placeholder="Postcode / Zip" class="userInfo__form_item">
                 <input type="submit" id="userInfo__shippingAdress_submit" class="userInfo__form_item_btn" value="get a quote">
