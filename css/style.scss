@@ -47,7 +47,7 @@ a {
  
     &__D {
         font-weight: 900;
-        color: rgba(241, 109, 127, 1);
+        color: $mainColor;
         letter-spacing: 0.03em;
     }
     
@@ -182,7 +182,7 @@ input[type="text"]:-ms-input-placeholder { padding-left: 16px;}
 .h2_fashion {
     font-size: 40px;
     font-weight: 900;
-    color: rgba(241, 109, 127, 1);
+    color: $mainColor;
     letter-spacing: 0.03em;
     -webkit-transform: scale(1);
     -ms-transform: scale(1);
@@ -218,7 +218,7 @@ input[type="text"]:-ms-input-placeholder { padding-left: 16px;}
     &__labelRed {
         font-size: 30px;
         font-weight: 900;
-        color: rgba(241, 109, 127, 1);
+        color: $mainColor;
         letter-spacing: 0.03em;
         text-transform: uppercase;
     }
@@ -529,9 +529,7 @@ input[type="text"]:-ms-input-placeholder { padding-left: 16px;}
     }
 }
 
-.s__slider_icon {
-    z-index: 2;
-
+.s__slider {
     &_info {
         display: flex;
         flex-direction: column;
@@ -540,7 +538,6 @@ input[type="text"]:-ms-input-placeholder { padding-left: 16px;}
         max-width: 425px;
         z-index: 2;
     }
-    
     &_info_text {
         font-size: 16px;
         font-style: italic;
@@ -552,7 +549,7 @@ input[type="text"]:-ms-input-placeholder { padding-left: 16px;}
     &_info_podpis_red {
         font-size: 16px;
         font-weight: bold;
-        color: rgba(241, 109, 127, 1);
+        color: $mainColor;
         letter-spacing: 0.03em;
         z-index: 2;
     }
@@ -565,6 +562,11 @@ input[type="text"]:-ms-input-placeholder { padding-left: 16px;}
         z-index: 2;
         margin-top: 20px;
     }
+
+    &_icon {
+        z-index: 2; 
+    }
+
 }
 
 .spots {
@@ -712,7 +714,7 @@ input[type="email"] {
     &__box_h1 {
         font-size: 24px;
         font-weight: 900;
-        color: rgba(241, 109, 127, 1);
+        color: $mainColor;
         text-transform: uppercase;
     }
     
@@ -733,7 +735,7 @@ input[type="email"] {
     
     &__box_nav_item_active {
         font-weight: bold;
-        color: rgba(241, 109, 127, 1);
+        color: $mainColor;
     }
 }
 
@@ -1072,52 +1074,8 @@ details.sidebar__item_details[open] > .sidebar__item_summary::after {
     text-align: center;
 }
 
-
-
-
 .shoppingCart {
     margin-top: 90px;
-
-    &__table_tbody_td {
-        padding-top: 25px;
-        padding-bottom: 25px;
-        font-size: 13px;
-        color: rgba(101, 101, 101, 1);
-        
-    }
-
-    &__table {
-        width: 100%;
-        border-collapse: collapse;
-    }
-    
-    &__table_thead {
-        font-size: 13px;
-        font-weight: bold;
-        color: rgba(34, 34, 34, 1);
-        letter-spacing: -0.01em;
-        line-height: 20px;
-        text-transform: uppercase;
-        border-bottom: 1px solid rgba(234, 234, 234, 1);
-        
-    }
-    
-    &__table_tr {
-        
-        padding-top: 20px;
-    }
-    
-    &__table_tbody_tr {
-        border-bottom: 1px solid rgba(234, 234, 234, 1);
-    }
-
-    /*
-    .&__box {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-    */
 
     &__productDetails_item {
         display: flex;
@@ -1127,6 +1085,10 @@ details.sidebar__item_details[open] > .sidebar__item_summary::after {
     &__productDetails_item_info {
         margin-left: 21px;
         text-align: left;
+    }
+
+    &__productDetails_item_link {
+        color: #000;
     }
     
     &__productDetails_item_details {
@@ -1298,7 +1260,7 @@ details.sidebar__item_details[open] > .sidebar__item_summary::after {
     }
     
     &__grandTotal_box_item2_price {
-        color: rgba(241, 109, 127, 1);
+        color: $mainColor;
     }
     
     &__grandTotal_box2 {
@@ -1307,7 +1269,7 @@ details.sidebar__item_details[open] > .sidebar__item_summary::after {
     }
     
     &__grandTotal_btn {
-        background: rgba(241, 109, 127, 1);
+        background: $mainColor;
         padding: 19px 42px;
         border: none;
         margin-top: 17px;
@@ -1378,7 +1340,7 @@ details.sidebar__item_details[open] > .sidebar__item_summary::after {
         margin-top: 73px;
         font-size: 14px;
         font-weight: bold;
-        color: rgba(241, 109, 127, 1);
+        color: $mainColor;
         border-bottom: 1px solid rgba(234, 234, 234, 1);
         padding-bottom: 15px;
     }
@@ -1601,7 +1563,7 @@ details.chechout__box_details[open] > .chechout__ul_summary::before {
 }
 
 .chechout__ul_box_form_submit_btn:hover {
-    background: rgba(241, 109, 127, 1);
+    background: $mainColor;
     color: white;
 }
 
