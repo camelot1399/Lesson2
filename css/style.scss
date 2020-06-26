@@ -1,5 +1,5 @@
 @import 'vars.scss';
-
+@import 'mixin.scss';
 * {
     margin: 0;
     padding: 0;
@@ -19,9 +19,7 @@ a {
 }
 
 .header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    @include flex(space-between, center);
     height: 100px;
     background-color: $whiteColor;
     border: 1px solid #ececec;
@@ -55,9 +53,7 @@ a {
     }
 
     &__link {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flex(center, center);
         font-size: 27px;
         font-weight: 300;
         color: rgba(34, 34, 34, 1);
@@ -70,9 +66,7 @@ a {
     height: 38px;
     width: 87px;
     background: rgba(249,249,249,1);
-    display: flex;
-    align-items: center;
-    Justify-content: space-around;
+    @include flex(space-around, center);
     color: rgba(34, 34, 34, 1);
     border-radius: 3px 0px 0px 3px;
     border: 1px solid rgba(230, 230, 230, 1);
@@ -111,13 +105,17 @@ input[type="text"]:-ms-input-placeholder { padding-left: 16px;}
 .btnMyAccount {
     height: 38px;
     background: $mainColor;
-    display: flex;
-    Justify-content: space-around;
-    align-items: center;
+    @include flex(space-around, center);
     font-size: 15px;
     color: rgba(255, 255, 255, 1);
     letter-spacing: 0.03em;
     padding: 18px 24px;
+}
+
+.btnMyAccount:hover {
+    background-color: white;
+    color: black;
+    outline: 1px solid #ccc;
 }
 
 .menu {
@@ -281,11 +279,8 @@ input[type="text"]:-ms-input-placeholder { padding-left: 16px;}
     
     &__item_img {
         position: relative;
-        
         background: rgba(233, 233, 233, 1);
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flex(center, center);
         width: 261px;
     }
     
@@ -293,9 +288,7 @@ input[type="text"]:-ms-input-placeholder { padding-left: 16px;}
         position: absolute;
         top: 97px;
         left: 70px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flex(center, center);
         visibility: hidden;
     }
     
@@ -443,9 +436,7 @@ input[type="text"]:-ms-input-placeholder { padding-left: 16px;}
 
 .subscribe {
     margin-top: 97px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+    @include flex(space-around, center);
     padding-top: 111px;
     padding-bottom: 156px;
     position: relative;
@@ -459,7 +450,6 @@ input[type="text"]:-ms-input-placeholder { padding-left: 16px;}
         z-index: 1;
         width: 100%;
         height: 100%;
-        
     }
     
     &_bg2 {
@@ -470,7 +460,6 @@ input[type="text"]:-ms-input-placeholder { padding-left: 16px;}
         z-index: 1;
         width: 100%;
         height: 100%;
-        
     }
     
     &__slider {
@@ -511,7 +500,6 @@ input[type="text"]:-ms-input-placeholder { padding-left: 16px;}
         border: none;
         z-index: 2;
         padding: 5px 20px;
-    
     }
 
     &_form_btn {
@@ -591,8 +579,6 @@ input[type="text"]:-ms-input-placeholder { padding-left: 16px;}
     }
 }
 
-
-
 .input_cfg:focus { outline: none; }
 
 input[type="email"] {
@@ -662,10 +648,13 @@ input[type="email"] {
         letter-spacing: 0.03em;
     }
 
+    &_top__item_link:hover {
+        border-bottom: 3px solid $mainColor;
+    }
+
     &__info {
         display: flex;
         justify-content: space-between;
-       
         padding-top: 24px;
         padding-bottom: 23px;
     }
@@ -687,9 +676,7 @@ input[type="email"] {
         background: #fff;
         font-size: 16px;
         color: rgba(178, 178, 178, 1);
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flex(center, center);
         margin-right: 8px;
     }
     
@@ -705,9 +692,7 @@ input[type="email"] {
     padding-bottom: 65px;
 
     &__box {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        @include flex(space-between, center);
     }
     
     &__box_h1 {
@@ -729,6 +714,10 @@ input[type="email"] {
         text-transform: uppercase;
     }
 
+    &__box_nav_item:hover {
+        border-bottom: 3px solid $mainColor;
+    }
+
     &__list:not(:last-child):after {
         content: ' /';
     }
@@ -738,8 +727,6 @@ input[type="email"] {
         color: $mainColor;
     }
 }
-
-
 
 .catalog {
     display: flex;
@@ -894,9 +881,6 @@ input[type="email"] {
     display: block;;
 }
 
-
-
-
 /*details*/
 
 .sidebar {
@@ -912,7 +896,7 @@ input[type="email"] {
       display: flex;
       justify-content: space-between;
       flex-direction: row;
-      border-left: 5px solid rgba(239, 91, 112, 1);
+      border-left: 5px solid $mainColor;
       padding: 12px 0 12px 11px;
       border-bottom: 1px solid rgba(235, 235, 235, 1);
       cursor: pointer;
@@ -922,7 +906,7 @@ input[type="email"] {
     
     &__item_summary:focus {
         outline: none;
-        color: rgba(239, 91, 112, 1);
+        color: $mainColor;
     }
     
     &__item_summary::-webkit-details-marker {
@@ -958,7 +942,7 @@ input[type="email"] {
 
 details.sidebar__item_details[open] > .sidebar__item_summary::after {
   content: '\25B2';
-  color: rgba(239, 91, 112, 1);
+  color: $mainColor;
 }
 /*details*/
 
@@ -997,7 +981,6 @@ details.sidebar__item_details[open] > .sidebar__item_summary::after {
     }
     
     &__item_param_ul li:first-child {
-    /*    border-right: none;*/
         padding-left: 0;
     }
     
@@ -1007,12 +990,10 @@ details.sidebar__item_details[open] > .sidebar__item_summary::after {
     }
     
     &__item_param_ul li:nth-child(3) {
-    /*   padding-left: 0;*/
         border-right: none;
     }
     
     &__item_param_ul li:nth-child(4) {
-    /*   border-right: none;*/
         margin-left: -10px;
         
     }
@@ -1054,7 +1035,6 @@ details.sidebar__item_details[open] > .sidebar__item_summary::after {
         justify-content: space-between;
         padding-top: 89px;
         padding-bottom: 114px;
-        
     }
     
     &__center_item {
@@ -1082,8 +1062,6 @@ details.sidebar__item_details[open] > .sidebar__item_summary::after {
 }
 
 /*таблица*/
-
-
 
 .td_center {
     text-align: center;
@@ -1135,17 +1113,10 @@ details.sidebar__item_details[open] > .sidebar__item_summary::after {
         justify-content: space-between;
         align-items: center;
         border-bottom: 1px solid rgba(234, 234, 234, 1);
-        
     }
     
     &__row2 {
-        display: flex;
-        justify-content: center;;
-        align-items: center;
-    }
-    
-    &__item {
-    /*    text-align: center;*/
+        @include flex(center, center);
     }
     
     &__item:nth-child(1) {
@@ -1154,7 +1125,6 @@ details.sidebar__item_details[open] > .sidebar__item_summary::after {
     
     &__rowList {
         display: flex;
-    /*    justify-content: center;*/
         align-items: center;
     }
 
@@ -1195,10 +1165,8 @@ details.sidebar__item_details[open] > .sidebar__item_summary::after {
 }
 
 .userInfo {
-    display: flex;
-    justify-content: space-between;
+    @include flex(space-between, flex-start)
     margin-top: 63px;
-    align-items: flex-start;
     flex-wrap: wrap;
 
     &__h4 {
@@ -1224,13 +1192,9 @@ details.sidebar__item_details[open] > .sidebar__item_summary::after {
         margin-bottom: 20px;
         height: 45px;
         border: 1px solid rgba(234, 234, 234, 1);
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+        @include flex(space-between, center);
         width: 355px;
         color: #000;
-        // padding-left: 10px;
-        // padding-right: 10px;
     }
     
     &__form_item_btn {
@@ -1267,8 +1231,6 @@ details.sidebar__item_details[open] > .sidebar__item_summary::after {
         flex-direction: column;
         justify-content: flex-end;
         align-items: flex-end;
-        
-    
     }
     
     &__grandTotal_box_item1 {
@@ -1300,12 +1262,10 @@ details.sidebar__item_details[open] > .sidebar__item_summary::after {
         border: none;
         margin-top: 17px;
         cursor: pointer;
-        
     }
 
     &__grandTotal_btn:hover {
         background-color: white;
-        // color: #000;
     }
 
     &__shippingAdress_form_text {
@@ -1319,10 +1279,9 @@ details.sidebar__item_details[open] > .sidebar__item_summary::after {
 }
 
 .imageSlide {
-    /*    position: relative;*/
+
     &__box {
         background: rgba(247, 247, 247, 1);
-    /*    height: 300px;*/
         position: relative;
         z-index: 1;
     }
@@ -1337,9 +1296,7 @@ details.sidebar__item_details[open] > .sidebar__item_summary::after {
         background: rgba(42, 42, 42, 0.15);
         width: 47px;
         height: 47px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flex(center, center);
         color: white;
         font-size: 21px;
         cursor: pointer;
@@ -1409,7 +1366,6 @@ details.sidebar__item_details[open] > .sidebar__item_summary::after {
         display: flex;
         justify-content: space-between;
         margin-top: 28px;
-        
         font-size: 14px;
         font-weight: bold;
         color: rgba(185, 185, 185, 1);
@@ -1426,7 +1382,7 @@ details.sidebar__item_details[open] > .sidebar__item_summary::after {
     &__price {
         font-size: 24px;
         font-weight: bold;
-        color: rgba(239, 91, 112, 1);
+        color: $mainColor;
         margin-top: 37px;
     }
     
@@ -1435,9 +1391,7 @@ details.sidebar__item_details[open] > .sidebar__item_summary::after {
         width: 100%;
         margin-top: 43px;
     }
-    
-    
-    
+
     &__form_box {
         display: flex;
         justify-content: space-between;
@@ -1450,7 +1404,7 @@ details.sidebar__item_details[open] > .sidebar__item_summary::after {
     &__form_box_browse {
         display: flex;
         align-items: center;
-        Justify-content: space-around;
+        justify-content: space-around;
         border-radius: 3px 0px 0px 3px;
         border: 1px solid rgba(230, 230, 230, 1);
         font-size: 12px;
