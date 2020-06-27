@@ -141,6 +141,18 @@ input[type="text"]:-ms-input-placeholder {
   background-color: white;
   border: 1px solid #e6e6e6;
   border-radius: 0px 3px 3px 0px;
+  cursor: pointer;
+}
+
+.btn_search:hover .fa-search {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.fa-search {
+  color: #a4a4a4;
 }
 
 .basket {
