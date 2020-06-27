@@ -164,12 +164,16 @@ input[type="text"]:-ms-input-placeholder {
   color: white;
   letter-spacing: 0.03em;
   padding: 18px 24px;
+  -webkit-transition: all 0.6s;
+  transition: all 0.6s;
 }
 
 .btnMyAccount:hover {
   background-color: white;
   color: black;
   outline: 1px solid #ccc;
+  -webkit-transition: all 0.6s;
+  transition: all 0.6s;
 }
 
 .menu {
@@ -263,8 +267,26 @@ input[type="text"]:-ms-input-placeholder {
   height: 823px;
 }
 
+.promo2__link {
+  overflow: hidden;
+  display: block;
+}
+
 .promo2__item {
   position: relative;
+  overflow: hidden;
+  width: 560px;
+}
+
+.promo2__img {
+  display: block;
+  -webkit-transition: ease 1s;
+  transition: ease 1s;
+}
+
+.promo2__item:hover .promo2__img {
+  -webkit-transform: scale(1.4);
+          transform: scale(1.4);
 }
 
 .promo2__label {
@@ -334,6 +356,8 @@ input[type="text"]:-ms-input-placeholder {
   margin-bottom: 31px;
   position: relative;
   display: block;
+  -webkit-transition: all 0.6s;
+  transition: all 0.6s;
 }
 
 .featuredItems__item_box {
@@ -343,11 +367,15 @@ input[type="text"]:-ms-input-placeholder {
 .featuredItems__item:hover .featuredItems__hover {
   opacity: 1;
   visibility: visible;
+  -webkit-transition: all 0.6s;
+  transition: all 0.6s;
 }
 
 .featuredItems__item:hover .featuredItems__item_img {
   -webkit-filter: brightness(0.4);
           filter: brightness(0.4);
+  -webkit-transition: all 0.6s;
+  transition: all 0.6s;
 }
 
 .featuredItems__link:hover {
@@ -358,6 +386,8 @@ input[type="text"]:-ms-input-placeholder {
 .featuredItems__item:hover {
   -webkit-box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.23);
           box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.23);
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
 .featuredItems__item_img {
@@ -1420,6 +1450,8 @@ details.sidebar__item_details[open] > .sidebar__item_summary::after {
   background: #fff;
   border: 1px solid #eaeaea;
   cursor: pointer;
+  -webkit-transition: all 0.6s;
+  transition: all 0.6s;
 }
 
 .shoppingCart2_btn:hover {

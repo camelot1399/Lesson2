@@ -110,12 +110,14 @@ input[type="text"]:-ms-input-placeholder { padding-left: 16px;}
     color: rgba(255, 255, 255, 1);
     letter-spacing: 0.03em;
     padding: 18px 24px;
+    transition: all 0.6s;
 }
 
 .btnMyAccount:hover {
     background-color: white;
     color: black;
     outline: 1px solid #ccc;
+    transition: all 0.6s;
 }
 
 .menu {
@@ -193,9 +195,24 @@ input[type="text"]:-ms-input-placeholder { padding-left: 16px;}
     flex-wrap: wrap;
     flex-direction: column;
     height: 823px;
-
+    
+    &__link {
+        overflow: hidden;
+        display: block;
+    }
     &__item {
         position: relative;
+        overflow: hidden;
+        width: 560px;
+    }
+
+    &__img {
+        display: block;
+        transition: ease 1s;
+    }
+
+    &__item:hover &__img {
+        transform: scale(1.4);
     }
     
     &__label {
@@ -254,6 +271,7 @@ input[type="text"]:-ms-input-placeholder { padding-left: 16px;}
         margin-bottom: 31px;
         position: relative;
         display: block;
+        transition: all 0.6s;
     }
     
     &__item_box {
@@ -263,18 +281,22 @@ input[type="text"]:-ms-input-placeholder { padding-left: 16px;}
     &__item:hover .featuredItems__hover {
         opacity: 1;
         visibility: visible;
+        transition: all 0.6s;
     }
     
     &__item:hover .featuredItems__item_img {
         filter: brightness(.4);
+        transition: all 0.6s;  
     }
     
     &__link:hover {
+       
          box-shadow: 0px 4px 8px 0px rgba(255,255,255, 0.73);
     }
     
     &__item:hover {
         box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.23);
+        transform: scale(1.05);
     }
     
     &__item_img {
@@ -1107,6 +1129,7 @@ details.sidebar__item_details[open] > .sidebar__item_summary::after {
 
 .shoppingCart2 {
     margin-top: 50px;
+    
 
     &__row {
         display: flex;
@@ -1143,6 +1166,7 @@ details.sidebar__item_details[open] > .sidebar__item_summary::after {
         background: #fff;
         border: 1px solid rgba(234, 234, 234, 1);
         cursor: pointer;
+        transition: all 0.6s;
     }
 
     &_btn:hover {
