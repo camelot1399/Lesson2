@@ -132,10 +132,92 @@ input[type="text"]:-ms-input-placeholder { padding-left: 16px;}
     transition: all 0.6s;
 }
 
+.drop {
+    position: absolute;
+    top: 48px;
+    // left: 0;
+    background-color: #fff;
+    padding: 12px 20px;
+    // border: 1px solid;
+    display: flex;
+    z-index: 6;
+    border-radius: 5px;
+    display: none;
+
+    &__last {
+        right: 0;
+    }
+
+    &__flex {
+        width: 234px;
+        margin-right: 46px;
+    }
+
+    &__flex:last-child {
+        margin-right: 0;
+    }
+
+    &__header {
+        font-size: 14px;
+        color: rgba(35, 35, 35, 1);
+        letter-spacing: 0.03em;
+        line-height: 32px;
+        text-transform: uppercase;
+        border-bottom: 1px solid rgba(232, 232, 232, 1);
+    }
+
+    &__ul {
+        list-style-type: none;
+    }
+
+    &__li {
+        letter-spacing: 0.03em;
+        line-height: 28px;
+        color: rgba(100, 100, 100, 1);
+    }
+
+    &__link {
+        font-size: 14px;
+        color: rgba(100, 100, 100, 1);
+        transition: all 0.6s;
+    }
+    &__link:hover {
+        color: $mainColor;
+    }
+
+    &__linkImg {
+        margin-left: -21px;
+        position: relative;
+        margin-top: 18px;
+    }
+
+    &__linkImg_text {
+        position: absolute;
+        bottom: 12px;
+        right: 10px;
+        font-size: 22px;
+        font-weight: 900;
+        color: rgba(255, 255, 255, 1);
+        letter-spacing: 0.03em;
+        line-height: 28px;
+        text-transform: uppercase;
+        width: 71px;
+    }
+
+}
+
 .menu {
     list-style-type: none;
     display: flex;
     justify-content: center;
+
+    &__item {
+        position: relative;
+    }
+
+    &__item:hover .drop {
+        display: flex;
+    }
 
     &__link {
         font-size: 14px;
@@ -859,19 +941,44 @@ input[type="email"] {
     position: relative;
 }
 
+#catalog__filter_browse {
+    width: 262px;
+}
+
 .catalog__rectangle_filter {
     position: relative;
 }
 
 .catalog__filter_dropdown {
     position: absolute;
-    border: 1px solid #ccc;
     top: 0;
     margin-top: 36px;
     z-index: 4;
-    width: 100%;
     display: none;
+    
+    left: 0;
+    background-color: #fff;
+    z-index: 5;
+    padding: 0 13px;
 
+    &__sortUp {
+        position: absolute;
+        left: 68px;
+        top: -5px;
+        color: white;
+        width: 15px;
+    }
+
+    &_header {
+        font-size: 14px;
+        color: rgba(35, 35, 35, 1);
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        border-bottom: 1px solid rgba(232, 232, 232, 1);
+        padding-bottom: 10px;
+        margin-left: 16px;
+        margin-top: 19px;
+    }
     &_ul {
         list-style-type: none;
         background: #fff;
@@ -879,20 +986,26 @@ input[type="email"] {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        width: 100%;
+        margin-top: 16px;
+        margin-bottom: 10px;
+        margin-left: 20px;
     }
 
     &_li {
         margin-bottom: 10px;
         width: 100%;
-        height: 38px;
         display: inline-flex;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
+        font-size: 14px;
+        color: rgba(79, 79, 79, 1);
+        letter-spacing: 0.03em;
+        line-height: 28px;
+        transition: all 0.6s;
     }
 
     &_li:hover {
-        background-color: $mainColor;
+        color: $mainColor;
     }
     
     &_li:last-child {
