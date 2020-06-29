@@ -1356,6 +1356,7 @@ details.sidebar__item_details[open] > .sidebar__item_summary::after {
         font-weight: bold;
         color: rgba(74, 74, 74, 1);
         text-transform: uppercase;
+        transition: all 0.6s;
     }
 
     &__form_item_btn:hover {
@@ -1411,6 +1412,7 @@ details.sidebar__item_details[open] > .sidebar__item_summary::after {
         border: none;
         margin-top: 17px;
         cursor: pointer;
+        transition: all 0.6s;
     }
 
     &__grandTotal_btn:hover {
@@ -1570,6 +1572,7 @@ details.sidebar__item_details[open] > .sidebar__item_summary::after {
 #productDescription__form_box_btn:hover {
     color: white;
     background: rgba(239, 91, 112, 1);
+    transition: all 0.6s;
 }
 
 #productDescription__form_box_btn {
