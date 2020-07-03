@@ -211,6 +211,14 @@ a {
   font-size: 32px;
   line-height: 38px;
   color: #000;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.block1__h2 {
+  font-weight: 600;
+  margin-top: 8px;
+  font-size: 24px;
 }
 
 .block2 {
@@ -365,9 +373,83 @@ a {
 .block2__h2 {
   color: #000000;
   font-size: 18px;
+  font-weight: 600;
 }
 
 .block2__p {
   margin-top: 10px;
+}
+
+.step {
+  background: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 27px;
+}
+
+.step__item {
+  width: 100%;
+  display: block;
+}
+
+.step__item img {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.step__h2 {
+  margin-top: 27px;
+}
+
+.step__p {
+  height: 56px;
+  margin-top: 8px;
+  margin-bottom: 10px;
+}
+
+.block5 {
+  background: #F7F7F7;
+  padding-top: 23px;
+  padding-bottom: 23px;
+}
+
+.block5__h2 {
+  color: #000;
+  font-weight: 600;
+}
+
+.zvonok {
+  background-color: #008DCD;
+  padding-top: 32px;
+  padding-bottom: 7px;
+}
+
+.zvonok__h2 {
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.zvonok__p {
+  color: #fff;
+}
+
+.zvonok__checkboxPersonLbl {
+  color: #fff;
+  font-size: 10px;
+}
+
+.zvonok__btn {
+  background-color: #FFCC00;
+  color: #000;
+  text-transform: uppercase;
 }
 /*# sourceMappingURL=style.css.map */

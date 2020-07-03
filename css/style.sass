@@ -163,18 +163,24 @@ a
         font-size: 32px
         line-height: 38px
         color: #000
+        text-transform: uppercase
+        font-weight: 600
+    &__h2
+        font-weight: 600
+        margin-top: 8px
+        font-size: 24px
 
 .block2
     background: #F7F7F7
     margin-top: 27px
     padding-top: 17px
 
-    display: flex;
-    flex-direction: column;
-    padding-left: 10px;
-    padding-right: 10px;
-    justify-content: center;
-    align-items: center;
+    display: flex
+    flex-direction: column
+    padding-left: 10px
+    padding-right: 10px
+    justify-content: center
+    align-items: center
 
     &__brendList
         position: relative
@@ -288,6 +294,55 @@ a
     
     &__h2
         color: #000000
-        font-size: 18px;
+        font-size: 18px
+        font-weight: 600
     &__p
         margin-top: 10px
+
+.step
+    background: $colorWhite
+    display: flex
+    flex-direction: column
+    justify-content: center
+    padding-top: 27px
+    &__item
+        width: 100%
+        display: block
+    &__item img
+        width: 100%
+        margin-top: 10px
+    &__h2
+        margin-top: 27px
+    &__p
+        height: 56px
+        margin-top: 8px
+        margin-bottom: 10px
+
+.block5
+
+    background: $colorLightGray
+    padding-top: 23px
+    padding-bottom: 23px
+
+    &__h2
+        color: #000
+        font-weight: 600
+
+.zvonok
+    background-color: $colorDefaultBlue
+    padding-top: 32px
+    padding-bottom: 7px
+    &__h2
+        color: $colorWhite
+        text-transform: uppercase
+        font-weight: 600
+    &__p
+        color: $colorWhite
+    &__checkboxPersonLbl
+        color: $colorWhite
+        font-size: 10px
+    &__btn
+        background-color: $colorDefaultOrange
+        color: #000
+        text-transform: uppercase
+    
