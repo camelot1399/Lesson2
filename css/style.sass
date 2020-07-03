@@ -1,0 +1,269 @@
+@import 'vars.sass'
+@import 'mixin.sass'
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+body
+    font-family: Myriad Pro
+
+h1, h2, h3, p
+    color: #363636
+
+p 
+    font-size: 16px
+    line-height: 19px
+
+.btn
+    border-radius: 30px  
+    width: 100%
+    background: $colorDefaultBlue
+    padding-top: 15px
+    padding-bottom: 15px
+    color: $colorWhite  
+    border: none
+    cursor: pointer
+    transition: box-shadow 0.6s
+    font-size: 16px
+    margin-top: 10px
+    &:hover
+        box-shadow: $btnBlueHover
+.inpt
+    border-radius: 30px  
+    width: 100%
+    background: $colorWhite
+    padding-top: 15px
+    padding-bottom: 15px
+    color: $colorDark  
+    border: 1px solid #363636
+    cursor: pointer
+    transition: box-shadow 0.6s
+    font-size: 16px
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 10px
+    &:hover
+        box-shadow: $colorGray
+
+
+.container
+    position: relative
+
+
+.drop
+    position: absolute
+    top: 0
+    left: 0
+    background: $colorWhite
+    color: $colorDark
+    padding-left: 10px
+    padding-right: 10px
+    width: 100%
+    display: none
+
+    &__h2
+        color: #000
+        font-size: 18px
+        text-align: left
+
+    &__header
+
+        display: flex
+        justify-content: space-between
+        align-items: center
+        
+
+    &__closeAll
+        color: $colorDark
+        cursor: pointer
+
+    &__nav_ul
+        list-style-type: none
+      
+    &__nav_li
+        font-size: 18px
+        line-height: 22px
+
+    &__nav_link
+        color: #000
+
+.lbl_personalData
+    display: flex;
+    justify-content: center;
+    font-size: 10px;
+    margin-top: 20px;
+    color: #9E9E9E;
+
+.center
+
+    padding-left: 10px
+    padding-right: 10px
+
+    @media (min-width: 768px)
+        padding-left: 29px
+        padding-right: 29px
+        
+
+body
+
+a
+    text-decoration: none
+.header__bars:hover .drop
+    display: block
+
+.header
+
+    background-image: url(../img/header_bg.jpeg)
+    background-size: cover
+    // background-repeat: no-repeat
+    background-position-x: -400px
+    height: 288px;
+    position: relative
+
+    &__img
+        width: 100px
+    &__heading
+        display: flex
+        justify-content: space-between
+        align-items: center
+        padding-top: 18px
+    &__bars
+        color: $colorWhite
+        display: block
+        cursor: pointer
+
+    @media (min-width: 768px)
+
+        background-image: url(../img/header_bg.jpeg)
+        background-size: cover
+        background-repeat: no-repeat
+        // background-position-x: -100px
+        height: 415px
+
+        &__bars
+            display: none
+    
+    @media (min-width: 1440px)
+
+        background-image: url(../img/header_bg.jpeg)
+        background-size: cover
+        background-repeat: no-repeat
+        // background-position-x: -100px
+        height: 525px
+
+        &__bars
+            display: none
+
+.block1
+    background: $colorWhite
+
+    &__h1
+        font-size: 32px
+        line-height: 38px
+        color: #000
+
+.block2
+    background: #F7F7F7
+    margin-top: 27px
+    padding-top: 17px
+
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+    padding-right: 10px;
+    justify-content: center;
+    align-items: center;
+
+    &__brendList
+        position: relative
+        height: 180px
+
+        &_bg
+            width: 100%
+        
+        &_cheb
+            position: absolute
+            top: 20%
+            left: calc(50% - 42px)
+            width: 84px
+        &_dpd
+            position: absolute
+            top: 15%
+            left: 2%
+            width: 45px
+            height: 26px
+            
+            overflow: hidden
+        &_dpd img
+            margin-top: -30px
+            width: 45px
+        
+        &_pony
+            position: absolute
+            top: 75px
+            left: 16px
+            width: 45px
+            height: 26px
+            
+            overflow: hidden
+        &_pony img
+            margin-top: -30px
+            width: 45px
+
+        &_bringo
+            position: absolute
+            top: 25px
+            left: 56px
+            width: 45px
+            height: 26px
+            
+            overflow: hidden
+        &_bringo img
+            margin-top: -30px
+            width: 38px
+        
+        &_cdek
+            position: absolute
+            top: 65px
+            left: 56px
+            width: 45px
+            height: 26px
+            
+            overflow: hidden
+        &_cdek img
+            margin-top: -30px
+            width: 38px
+
+        &_tnt
+            position: absolute
+            top: 15px
+            left: 176px
+            width: 45px
+            height: 26px
+            
+            overflow: hidden
+        &_tnt img
+            margin-top: -30px
+            width: 38px
+
+        &_ups
+            position: absolute
+            top: 15px
+            left: 176px
+            width: 45px
+            height: 26px
+            
+            overflow: hidden
+        &_ups img
+            margin-top: -30px
+            width: 38px
+
+    
+    
+    &__h2
+        color: #000000
+        font-size: 18px;
+    &__p
+        margin-top: 10px
