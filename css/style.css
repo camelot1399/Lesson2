@@ -506,6 +506,94 @@ a {
   margin-top: 9px;
 }
 
+.warranty {
+  padding-top: 47px;
+  padding-bottom: 42px;
+}
+
+.warranty__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 17px;
+}
+
+.warranty__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+}
+
+.warranty__img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.warranty__img img {
+  width: 30px;
+}
+
+.warranty__img {
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+  background: #F7F7F7;
+}
+
+.warranty__rectangles_left {
+  position: absolute;
+  top: 40px;
+  left: 0;
+}
+
+.warranty__rectangles_right {
+  position: absolute;
+  top: 40px;
+  right: 0;
+}
+
+.doubts {
+  background: #D2ECF7;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.doubts__h2 {
+  font-weight: 600;
+}
+
+.doubts__list {
+  margin-top: 30px;
+}
+
+.doubts__item {
+  font-size: 14px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.doubts__item_details {
+  background-color: #fff;
+  padding: 15px 30px;
+  border-radius: 50px;
+}
+
 @media (max-width: 767px) {
   .center {
     padding-left: 10px;
@@ -612,17 +700,17 @@ a {
   .advantages__item img {
     width: 40px;
   }
-  .advantages__list_block {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-    margin-top: 12px;
+  .advantages__list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .advantages__item {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
   }
   .advantages__item_img {
     background-color: #fff;
@@ -632,6 +720,48 @@ a {
   }
   .advantages__item_text {
     text-align: center;
+  }
+  .warranty {
+    padding-top: 47px;
+    padding-bottom: 42px;
+  }
+  .warranty__block1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .warranty__img {
+    width: 62px;
+    height: 62px;
+    border-radius: 62px;
+  }
+  .warranty__list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-left: 35px;
+    padding-right: 35px;
+    position: relative;
+    max-height: 238px;
+    overflow: hidden;
+  }
+  .warranty__h3 {
+    margin-left: 10px;
+    width: 100px;
+    font-weight: 600;
+  }
+  .warranty__p {
+    margin-top: 8px;
+  }
+  .warranty__btn {
+    margin-top: 30px;
   }
 }
 
@@ -877,6 +1007,33 @@ a {
   .advantages__item_text {
     text-align: center;
   }
+  .warranty__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .warranty__img {
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    background: #F7F7F7;
+  }
+  .warranty__img img {
+    width: 30px;
+  }
+  .warranty__h3 {
+    margin-top: 18px;
+  }
+  .warranty__p {
+    margin-top: 8px;
+  }
+  .warranty__btn {
+    margin-top: 30px;
+  }
+  .warranty__item {
+    -ms-flex-preferred-size: 30%;
+        flex-basis: 30%;
+  }
 }
 
 @media (min-width: 1440px) {
@@ -958,6 +1115,19 @@ a {
   }
   .feedback__rectangle_right {
     font-size: 40px;
+  }
+  .warranty {
+    padding-top: 80px;
+    padding-bottom: 64px;
+  }
+  .warranty__h3 {
+    margin-top: 32px;
+  }
+  .warranty__p {
+    margin-top: 10px;
+  }
+  .warranty__btn {
+    margin-top: 34px;
   }
 }
 /*# sourceMappingURL=style.css.map */

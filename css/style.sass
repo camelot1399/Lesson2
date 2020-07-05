@@ -360,7 +360,54 @@ a
             text-align: center
             margin-top: 9px
 
-    
+.warranty
+    padding-top: 47px
+    padding-bottom: 42px
+    &__list
+        display: flex;
+        justify-content: space-between;
+        margin-top: 17px;
+    &__item
+        display: flex;
+        flex-direction: column;
+        flex-basis: 100%;
+    &__img
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    &__img img
+        width: 30px
+    &__img
+        width: 100px
+        height: 100px
+        border-radius: 100px
+        background: $colorLightGray
+    &__rectangles_left
+        position: absolute
+        top: 40px
+        left: 0
+    &__rectangles_right
+        position: absolute
+        top: 40px
+        right: 0
+
+.doubts
+    background: #D2ECF7
+    padding-top: 40px
+    padding-bottom: 40px
+    &__h2
+        font-weight: 600
+    &__list
+        margin-top: 30px
+    &__item
+        font-size: 14px
+        margin-top: 10px;
+        margin-bottom: 10px;
+        &_details
+            background-color: $colorWhite
+            padding: 15px 30px
+            border-radius: 50px
+            
 
 @media (max-width: 767px)
     .center
@@ -434,31 +481,49 @@ a
             font-size: 28px
         &__item img
             width: 40px
-        
-        &__list_block
-            display: flex
-            justify-content: center;
-            align-items: flex-start;
-            margin-top: 12px
+        &__list 
+            flex-direction: column;
+            flex-wrap: wrap;
+
         &__item
-            // display: flex;
-            // flex-direction: column;
-            // align-items: center;
-            // justify-content: center;
-            // flex-basis: 33%;
+            flex-basis: 100%;
             &_img
                 background-color: #fff
-                // display: flex;
-                // align-items: center;
-                // justify-content: center;
                 width: 86px
                 height: 86px
                 border-radius: 86px
             &_text
                 text-align: center
-                
-
-
+    .warranty
+        padding-top: 47px
+        padding-bottom: 42px
+        &__block1
+            display: flex
+            justify-content: flex-start
+            align-items: center
+        &__img
+            width: 62px
+            height: 62px
+            border-radius: 62px
+        &__list
+            flex-direction: column
+            padding-left: 35px
+            padding-right: 35px
+            position: relative
+            max-height: 238px
+            overflow: hidden
+        &__item
+            
+        &__h3
+            margin-left: 10px
+            width: 100px
+            font-weight: 600
+        &__p
+            margin-top: 8px
+        &__btn
+            margin-top: 30px
+        
+            
 @media (min-width: 768px)
     .center
         @include paddingLR(34px, 34px)
@@ -620,6 +685,25 @@ a
             &_text
                 text-align: center
 
+    .warranty
+        &__list
+            display: flex;
+        &__img
+            width: 100px
+            height: 100px
+            border-radius: 100px
+            background: $colorLightGray
+        &__img img
+            width: 30px
+        &__h3
+            margin-top: 18px
+        &__p
+            margin-top: 8px
+        &__btn
+            margin-top: 30px
+        &__item
+            flex-basis: 30%
+
 @media (min-width: 1440px)
     .center
         padding: 0 calc(50% - 670px);
@@ -679,3 +763,12 @@ a
             font-size: 40px
         &__rectangle_right
             font-size: 40px
+    .warranty
+        padding-top: 80px
+        padding-bottom: 64px
+        &__h3
+            margin-top: 32px
+        &__p
+            margin-top: 10px
+        &__btn
+            margin-top: 34px
