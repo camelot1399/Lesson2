@@ -10,58 +10,49 @@ body
     font-family: Myriad Pro
 
 h1, h2, h3, p
-    color: #363636
+    // color: #363636
 
 p 
     font-size: 16px
     line-height: 19px
 
-.btn
+a
+    text-decoration: none
+
+.tmplt_btn
     border-radius: 30px  
     width: 100%
-    background: $colorDefaultBlue
     padding-top: 15px
     padding-bottom: 15px
-    color: $colorWhite  
-    border: none
     cursor: pointer
-    transition: box-shadow 0.6s
     font-size: 16px
     margin-top: 10px
+
+.btn
+    @extend .tmplt_btn
+    background: $colorDefaultBlue
+    color: $colorWhite  
+    border: none
+    transition: box-shadow 0.6s
     &:hover
         box-shadow: $btnBlueHover
 .inpt
-    border-radius: 30px  
-    width: 100%
+    @extend .tmplt_btn
     background: $colorWhite
-    padding-top: 15px
-    padding-bottom: 15px
     color: $colorDark  
     border: 1px solid #363636
-    cursor: pointer
     transition: box-shadow 0.6s
-    font-size: 16px
     padding-left: 10px;
     padding-right: 10px;
-    margin-top: 10px
+    &:focus
+        outline: none;
     &:hover
         box-shadow: $colorGray
 
-
-.container
-    position: relative
-
-
 .drop
-    position: absolute
-    top: 0
-    left: 0
-    background: $colorWhite
+    
     color: $colorDark
-    padding-left: 10px
-    padding-right: 10px
-    width: 100%
-    display: none
+    
 
     &__h2
         color: #000
@@ -87,7 +78,7 @@ p
         line-height: 22px
 
     &__nav_link
-        color: #000
+        color: white
 
 .lbl_personalData
     display: flex;
@@ -95,66 +86,33 @@ p
     font-size: 10px;
     margin-top: 20px;
     color: #9E9E9E;
-
-.center
-
-    padding-left: 10px
-    padding-right: 10px
-
-    @media (min-width: 768px)
-        padding-left: 29px
-        padding-right: 29px
-        
-
-body
-
-a
-    text-decoration: none
-.header__bars:hover .drop
-    display: block
-
+    
 .header
-
     background-image: url(../img/header_bg.jpeg)
     background-size: cover
-    // background-repeat: no-repeat
-    background-position-x: -400px
-    height: 288px;
-    position: relative
+    background-position: no-repeat
 
-    &__img
+    &__logo
         width: 100px
     &__heading
         display: flex
-        justify-content: space-between
-        align-items: center
         padding-top: 18px
     &__bars
         color: $colorWhite
         display: block
         cursor: pointer
+    &__body_h1
+        color: white
+    &__body_h2
+        color: white
 
-    @media (min-width: 768px)
+#switcher
+    position: absolute
+    visibility: hidden
+    left: -999999px
 
-        background-image: url(../img/header_bg.jpeg)
-        background-size: cover
-        background-repeat: no-repeat
-        // background-position-x: -100px
-        height: 415px
-
-        &__bars
-            display: none
-    
-    @media (min-width: 1440px)
-
-        background-image: url(../img/header_bg.jpeg)
-        background-size: cover
-        background-repeat: no-repeat
-        // background-position-x: -100px
-        height: 525px
-
-        &__bars
-            display: none
+    &:checked ~ .drop
+        left: 0
 
 .block1
     background: $colorWhite
@@ -175,12 +133,7 @@ a
     margin-top: 27px
     padding-top: 17px
 
-    display: flex
-    flex-direction: column
-    padding-left: 10px
-    padding-right: 10px
-    justify-content: center
-    align-items: center
+    
 
     &__brendList
         position: relative
@@ -301,9 +254,7 @@ a
 
 .step
     background: $colorWhite
-    display: flex
-    flex-direction: column
-    justify-content: center
+    
     padding-top: 27px
     &__item
         width: 100%
@@ -346,3 +297,385 @@ a
         color: #000
         text-transform: uppercase
     
+.feedback
+    background-color: $colorWhite
+    &__content
+        position: relative
+    &__ul
+        list-style-type: none
+    &__heading
+        display: flex;
+        align-items: center;
+        &_top
+            font-size: 36px
+        &_middle
+                font-size: 20px
+                margin-top: 6px
+        &_text
+            margin-left: 20px;
+        &_bottom
+            display: flex;
+            flex-direction: column;
+    &__text
+        margin-top: 10px
+    &__rectangle_left
+        position: absolute
+        top: 50%
+        left: 0
+        color: #C4C4C4
+        cursor: pointer
+        font-size: 12px
+    &__rectangle_right
+        position: absolute
+        top: 50%
+        right: 0
+        color: #C4C4C4
+        cursor: pointer
+        font-size: 12px
+
+.advantages
+    background-color: #F7F7F7
+    padding-top: 23px
+    padding-bottom: 34px
+    &__list_block
+        display: flex
+        justify-content: center;
+        align-items: flex-start;
+        margin-top: 12px
+    &__item
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center
+        flex-basis: 33%;
+        &_img
+            background-color: #fff
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 86px
+            height: 86px
+            border-radius: 86px
+        &_text
+            text-align: center
+            margin-top: 9px
+
+    
+
+@media (max-width: 767px)
+    .center
+        @include paddingLR(10px, 10px)
+    
+    .header
+        background-position-x: -400px
+        height: 288px
+        background-position: no-repeat
+        &__heading
+            align-items: center
+            justify-content: space-between
+        &__body
+            display: none
+    .drop
+
+        position: fixed
+        top: 0
+        left: 100%
+        background: $colorWhite
+        @include paddingLR(10px, 10px)
+        width: 100%
+        height: 100vh
+        transition: all .6s
+        padding-top: 13px
+        &__nav_link
+            color: #000
+    .step
+        display: flex
+        flex-direction: column
+        justify-content: center
+    .block2
+        display: flex
+        flex-direction: column
+        padding-left: 10px
+        padding-right: 10px
+        justify-content: center
+        align-items: center
+
+    .feedback
+        padding-top: 21px
+        padding-bottom: 21px
+        &__content
+            margin-top: 7px
+        
+        &__heading
+
+            &_top
+                font-size: 28px
+            &_middle
+                font-size: 18px
+                margin-top: 6px
+            &_span
+                font-size: 10px
+                margin-top: 5px
+        &__ul
+            padding-left: 35px;
+            padding-right: 35px;
+    
+        &__img
+            width: 100px
+            max-height: 100px
+            overflow: hidden
+        &__img img
+            width: 100%
+            height: 100%
+        &__text
+            font-size: 12px
+    .advantages
+        &__h2
+            font-size: 28px
+        &__item img
+            width: 40px
+        
+        &__list_block
+            display: flex
+            justify-content: center;
+            align-items: flex-start;
+            margin-top: 12px
+        &__item
+            // display: flex;
+            // flex-direction: column;
+            // align-items: center;
+            // justify-content: center;
+            // flex-basis: 33%;
+            &_img
+                background-color: #fff
+                // display: flex;
+                // align-items: center;
+                // justify-content: center;
+                width: 86px
+                height: 86px
+                border-radius: 86px
+            &_text
+                text-align: center
+                
+
+
+@media (min-width: 768px)
+    .center
+        @include paddingLR(34px, 34px)
+    .header
+        height: 415px
+        background-position-x: -250px
+        background-position: no-repeat
+        &__menuBtn
+            display: none
+        &__heading
+            align-items: center
+            justify-content: space-between
+        &__body
+            max-width: 400px
+        &__body_h1
+            margin-top: 58px
+            font-size: 44px
+            width: 450px
+        &__body_h2
+            margin-top: 18px
+            font-size: 28px
+    .drop
+        display: flex
+        &__header
+            display: none
+        &__nav_ul
+            display: flex
+            color: $colorWhite
+        &__nav_li
+            font-size: 14px
+        &__nav_li:not(:last-child)
+            margin-right: 30px
+        &__nav_link:hover
+            // font-weight: bold
+            
+    .viewMobileOnly
+        display: none
+    .block1
+        display: none
+
+    .step
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        &__item
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex-basis: 30%;
+            flex-basis: 50%;
+            padding-left: 10px;
+            padding-right: 10px;
+            // width: 280px
+        &__item img 
+            width: 278px
+    .block2
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+        align-items: center;
+        padding-top: 17px
+        padding-bottom: 40px
+
+        &__item
+            width: 50%;
+    
+    .block5
+        display: flex;
+        align-items: center;  
+        &__item 
+            flex-basis: 50%;
+
+    .zvonok
+        display: flex;  
+        justify-content: space-between;
+        &__h2
+            font-size: 28px;
+        &__p
+            margin-top: 11px
+        &__left
+            flex-basis: 40%
+        &__right
+            flex-basis: 50%
+        &__checkboxPerson
+            margin-top: 9px
+
+    .inpt__min768
+        background: $colorDefaultBlue
+        border: 1px solid $colorWhite;
+        color: $colorWhite
+        
+        &::placeholder
+            color: $colorWhite
+    
+    .feedback
+        padding-top: 21px
+        padding-bottom: 21px
+        &__content
+            margin-top: 27px
+        &__heading
+
+            &_top
+                font-size: 26px
+            &_middle
+                font-size: 18px
+                margin-top: 6px
+            &_span
+                font-size: 10px
+                margin-top: 6px
+        &__img
+            width: 156px
+            max-height: 100px
+            overflow: hidden
+        &__img img
+            width: 100%
+            height: 100%
+        &__text
+            font-size: 14px
+        &__ul
+            display: flex;
+            justify-content: space-between;
+            padding-left: 94px;
+            padding-right: 94px;
+        &__li
+            flex-basis: 45%
+        &__rectangle_left
+            left: 0
+            font-size: 30px
+        &__rectangle_right
+            right: 0
+            font-size: 30px
+    
+    .advantages
+        &__h2
+            font-size: 28px
+        &__item img
+            width: 40px
+        
+        &__list_block
+            display: flex
+            justify-content: center;
+            align-items: flex-start;
+            margin-top: 12px
+        &__item
+            // display: flex;
+            // flex-direction: column;
+            // align-items: center;
+            // justify-content: center;
+            // flex-basis: 33%;
+            &_img
+                // background-color: #fff
+                // display: flex;
+                // align-items: center;
+                // justify-content: center;
+                width: 86px
+                height: 86px
+                border-radius: 86px
+            &_text
+                text-align: center
+
+@media (min-width: 1440px)
+    .center
+        padding: 0 calc(50% - 670px);
+    
+    .header
+        height: 525px
+        &__body_h1
+            margin-top: 88px
+            font-size: 44px
+            width: 700px
+        &__body_h2
+            margin-top: 18px
+            font-size: 28px
+        &__menuBtn
+            display: none
+        &__body
+            max-width: 600px
+
+    .drop
+        &__nav_li
+            font-size: 18px
+        &__nav_li:not(:last-child)
+            margin-right: 60px
+        &__nav_link:hover
+            // font-weight: bold
+    
+    .block1
+        display: none
+    
+    .step
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        &__item
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex-basis: 30%;
+            flex-basis: 50%;
+            padding-left: 10px;
+            padding-right: 10px;
+            // width: 280px
+        &__item img 
+            width: 460px
+    .feedback
+        &__content
+            margin-top: 45px
+        &__img
+            width: 161px
+            max-height: 166px
+            overflow: hidden
+        &__img img
+            width: 100%
+            height: 100%
+        &__rectangle_left
+            font-size: 40px
+        &__rectangle_right
+            font-size: 40px
