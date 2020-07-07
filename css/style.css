@@ -730,6 +730,7 @@ details[open] > summary::after {
   }
   .header {
     background-position-x: -400px;
+    background-size: cover;
     height: 288px;
   }
   .header__heading {
