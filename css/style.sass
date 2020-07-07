@@ -1,6 +1,10 @@
 @import 'vars.sass'
 @import 'mixin.sass'
 
+
+@font-face 
+    font-family: Myriad Pro
+    src: url(fonts/8143.otf)
 *
     margin: 0
     padding: 0
@@ -52,6 +56,7 @@ a
 .drop
     
     color: $colorDark
+    z-index: 10
     
 
     &__h2
@@ -88,9 +93,11 @@ a
     color: #9E9E9E;
     
 .header
-    background-image: url(../img/header_bg.jpeg)
+    background-image: url(../img/header_bg.jpeg) 
     background-size: cover
-    background-position: no-repeat
+    background-repeat: no-repeat
+    background-size: 100%
+    // width: 100%
 
     &__logo
         width: 100px
@@ -408,7 +415,95 @@ a
             padding: 15px 30px
             border-radius: 50px
             
+    &__content
+        background-color: #F7F7F7
+        padding: 20px 56px
+            
 
+        
+
+.brendList
+    &__box
+        position: relative
+    &__ul
+        display: flex;
+        justify-content: space-around;
+        align-items: center;  
+        list-style-type: none
+        flex-wrap: wrap;
+        padding-top: 16px
+        padding-bottom: 16px
+    &__li
+        // width: 77px
+        // height: 58px
+        overflow: hidden
+    &__img
+        width: 100%
+        margin-top: -40px;
+        
+        &_bringo
+            // margin-top: -25px
+        &_city
+            margin-top: -45px;
+        &_dpd
+            // margin-top: -30px;
+        &_spsr
+            // margin-top: -30px;
+    &__rectangle_left
+        position: absolute
+        top: 50%
+        left: 0
+        color: #C4C4C4
+        cursor: pointer
+        font-size: 12px
+    &__rectangle_right
+        position: absolute
+        top: 50%
+        right: 0
+        color: #C4C4C4
+        cursor: pointer
+        font-size: 12px
+.footer
+    padding-top: 13px
+    padding-bottom: 5px
+    background-color: #E9E9E9
+    &__heading
+        border-bottom: 1px solid #ccc
+        padding-bottom: 13px
+        &_h2
+            font-size: 18px;
+    &__inptTel
+        background-color: #E9E9E9
+    &__drop_ul
+        // border-bottom: 1px solid #ccc
+    &__nav_link
+        color: #000
+    &__bars
+        color: #000
+    &__bottom
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 10px;
+        padding-top: 18px
+        border-top: 1px solid #ccc
+        margin-top: 18px
+
+details[open] > summary::after 
+            content: '\22C0';
+            
+.doubts__item_summary 
+    display: flex;
+    justify-content: space-between;
+        
+.doubts__item_summary::-webkit-details-marker 
+    display: none;
+        
+.doubts__item_summary::after 
+    content: '\22C1';
+    padding-right: 0.5em;
+    color: #008DCD
+        
 @media (max-width: 767px)
     .center
         @include paddingLR(10px, 10px)
@@ -416,7 +511,7 @@ a
     .header
         background-position-x: -400px
         height: 288px
-        background-position: no-repeat
+        // background-position: no-repeat
         &__heading
             align-items: center
             justify-content: space-between
@@ -476,6 +571,9 @@ a
             height: 100%
         &__text
             font-size: 12px
+        &__ul
+            height: 236px
+            overflow: hidden
     .advantages
         &__h2
             font-size: 28px
@@ -522,20 +620,26 @@ a
             margin-top: 8px
         &__btn
             margin-top: 30px
-        
+    .brendList
+        &__li
+            width: 77px
+            height: 56px
+        &__img
+            &_bringo
+                // margin-top: -50px
             
 @media (min-width: 768px)
     .center
         @include paddingLR(34px, 34px)
     .header
         height: 415px
-        background-position-x: -250px
-        background-position: no-repeat
+        padding-top: 30px
         &__menuBtn
             display: none
         &__heading
             align-items: center
             justify-content: space-between
+            
         &__body
             max-width: 400px
         &__body_h1
@@ -600,6 +704,7 @@ a
     .zvonok
         display: flex;  
         justify-content: space-between;
+        padding-bottom: 40px
         &__h2
             font-size: 28px;
         &__p
@@ -703,6 +808,13 @@ a
             margin-top: 30px
         &__item
             flex-basis: 30%
+    .brendList
+        padding-top: 60px
+        padding-bottom: 60px
+        &__li
+            width: 66px
+            height: 41px
+        
 
 @media (min-width: 1440px)
     .center
@@ -733,8 +845,25 @@ a
     .block1
         display: none
     
-    .step
+    .block5
 
+        padding-top: 72px;
+        padding-bottom: 64px;
+        &__h2
+            font-size: 36px
+    
+    .zvonok
+        padding-top: 73px;
+        padding-bottom: 41px;
+        &__h2
+            font-size: 48px
+            font-weight: bold
+    .advantages
+        padding-top: 70px;
+        padding-bottom: 40px;
+    .step
+        padding-top: 70px;
+        padding-bottom: 40px;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
@@ -750,6 +879,8 @@ a
         &__item img 
             width: 460px
     .feedback
+        padding-top: 70px;
+        padding-bottom: 40px;
         &__content
             margin-top: 45px
         &__img
@@ -761,14 +892,52 @@ a
             height: 100%
         &__rectangle_left
             font-size: 40px
+            top: 30%;
         &__rectangle_right
             font-size: 40px
+            top: 30%;
+        
     .warranty
+
         padding-top: 80px
         padding-bottom: 64px
-        &__h3
-            margin-top: 32px
+        &__h2
+
         &__p
             margin-top: 10px
         &__btn
             margin-top: 34px
+    .doubts
+
+        padding-top: 40px
+        padding-bottom: 40px
+        &__h2
+            font-size: 36px
+            font-weight: bold
+        &__item_details
+            width: 90%
+        &__list
+            display: flex;
+            justify-content: space-between;
+            flex-basis: 50%;
+            flex-wrap: wrap;
+        &__item
+            display: flex;
+            flex-basis: 50%;
+    .brendList
+        padding-top: 60px
+        padding-bottom: 60px
+        &__li
+            width: 94px
+            height: 80px
+        &__img
+            &_bringo
+                // margin-top: -50px
+            &_city
+                margin-top: -55px;
+            &_dpd
+                margin-top: -60px;
+            &_spsr
+                margin-top: -50px;
+            &_pony
+                margin-top: -60px;
